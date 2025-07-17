@@ -1,4 +1,7 @@
 # Valid Palindrome
+import collections
+import re
+
 
 # "Check is given string palindrome"
 
@@ -27,6 +30,38 @@ def is_palindrome() -> bool:
     return True
 
 
-### Solution2 ###
+### Solution2 ### (Using deque for optimizing)
+def is_palindrome2() -> bool:
+
+    user_input = input()
+
+    filtered_str = collections.deque()
+
+    # put only lower alphabet or numbers
+    for char in user_input:
+        if char.isalnum():
+            filtered_str.append(char.lower())
+
+    while len(filtered_str) > 1:
+        if filtered_str.popleft() != filtered_str.pop():
+            return False
+
+    return True
+
+
+### Solution3 ### (Regular Expression)
+def is_palindrome3() -> bool:
+    inputs = input()
+
+    # make lower letter
+    inputs = inputs.lower()
+
+    filtered_str = re.sub('[^a-z0-9]','',inputs)
+    return filtered_str[:] == filtered_str[::-1]
+
+print(is_palindrome3())
+
+
+
 
 
