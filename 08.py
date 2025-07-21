@@ -21,3 +21,4 @@ def cal_water(wall: list[int])-> int:
             right_max -= 1
     
     return water
+
