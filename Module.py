@@ -3,3 +3,10 @@ class IntegerLinkedList:
         self.value = value
         self.next = next
 
+def debug_list(head):
+    print('[', end=' ')
+    while head != None:
+        print(head.value, end=' ')
+        head = head.next
+    print(']')
+
