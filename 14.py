@@ -15,7 +15,7 @@ h2_3 = IntegerLinkedList(4,None)
 h2_2 = IntegerLinkedList(3,h2_3)
 h2_1 = IntegerLinkedList(1,h2_2)
 
-### Solution1 ### !Watch Out Mutiple Initialization!
+### Solution1 ### !Watch Out Mutiple Assigment!
 def merge_list(head1: IntegerLinkedList, head2: IntegerLinkedList)-> IntegerLinkedList:
     _head1, _head2 = head1, head2
     return_head = None
