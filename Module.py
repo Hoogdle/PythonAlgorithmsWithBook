@@ -10,3 +10,9 @@ def debug_list(head):
         head = head.next
     print(']')
 
+def debug_list_class(head):
+    print('[', end=' ')
+    while head != None:
+        print(head, end=' ')
+        head = head.next
+    print(']')
